@@ -1,0 +1,10 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app= "http://schemas.android.com/apk/res-auto" >
+    <com.example.olya.myapplication.CustomView
+        android:id="@+id/durationview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:customColor="#0066cc"
+        app:customRatio="15px"
+        />
+</merge>
