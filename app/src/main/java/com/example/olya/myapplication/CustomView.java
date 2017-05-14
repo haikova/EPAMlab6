@@ -11,13 +11,13 @@ import android.view.View;
 
 public class CustomView extends View {
 
-    Paint p;
+    Paint painter;
     private int customColor = Color.GREEN;
     private int customRatio = 10;
 
     public CustomView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        p = new Paint();
+        painter = new Paint();
 
         TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CustomView);
         customColor = attributes.getColor(R.styleable.CustomView_customColor, customColor);
@@ -28,11 +28,13 @@ public class CustomView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        p.setColor(customColor);
-        p.setStrokeWidth(customRatio);
-        canvas.drawCircle(10 * customRatio, 20 * customRatio, 5 * customRatio, p);
-        canvas.drawCircle(30 * customRatio, 20 * customRatio, 5 * customRatio, p);
-        p.setStyle(Paint.Style.STROKE);
-        canvas.drawArc(5 * customRatio, 35 * customRatio, 35 * customRatio, 55 * customRatio, 180, 180, false, p);
+        painter.setColor(customColor);
+        painter.setStrokeWidth(customRatio);
+
+        canvas.drawCircle(10 * customRatio, 20 * customRatio, 5 * customRatio, painter);
+        canvas.drawCircle(30 * customRatio, 20 * customRatio, 5 * customRatio, painter);
+
+        painter.setStyle(Paint.Style.STROKE);
+        canvas.drawArc(5 * customRatio, 35 * customRatio, 35 * customRatio, 55 * customRatio, 180, 180, false, painter);
     }
 }
