@@ -52,13 +52,7 @@ public class CustomView extends View {
     class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onDown(MotionEvent e) {
-            if(!currentMouth){
-                currentMouth = true;
-            }
-            else {
-                currentMouth = false;
-            }
-
+            currentMouth = !currentMouth;
             invalidate();
             return true;
         }
