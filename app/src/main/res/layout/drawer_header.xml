@@ -7,15 +7,13 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
     android:gravity="bottom"
-    android:id="@+id/drawer_header"
-    >
+    android:id="@+id/dh">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/sym_def_app_icon"
-        />
+        android:src="@drawable/img111" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

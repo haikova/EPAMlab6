@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.support.design.widget.NavigationView;
 
+
 import com.squareup.picasso.Picasso;
 
 
@@ -24,32 +25,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mNavigationView = (NavigationView) findViewById(R.id.navigation);
-        View navHeader = mNavigationView.getHeaderView(0);
-        ImageView image = (ImageView) navHeader.findViewById(R.id.imageView);
-        Picasso.with(MainActivity.this).load
-                ("https://image.flaticon.com/icons/png/128/119/119591.png").into(image);
+        View header = mNavigationView.getHeaderView(0);
+        ImageView imgvw = (ImageView) header.findViewById(R.id.imageViewHeader);
+        Picasso.with(imgvw.getContext()).load
+                ("https://pp.userapi.com/c636518/v636518871/6bf65/eZHO0BZ9YRU.jpg").into(imgvw);
 
         mNavigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        int id = menuItem.getItemId();
                         FragmentManager fragmentManager = getFragmentManager();
-                        switch (id) {
+                        Fragment fragment = null;
+                        switch (menuItem.getItemId()) {
                             case (R.id.frag1):
-                                Fragment fragment = new FragmentOne();
-                                fragmentManager.beginTransaction()
-                                        .replace(R.id.content_frame, fragment)
-                                        .commit();
+                                fragment = new FragmentOne();
                                 break;
 
                             case (R.id.frag2):
-                                Fragment fragment2 = new FragmentTwo();
-                                fragmentManager.beginTransaction()
-                                        .replace(R.id.content_frame, fragment2)
-                                        .commit();
+                                fragment = new FragmentTwo();
                                 break;
                         }
+                        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment)
+                                .commit();
                         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                         drawer.closeDrawer(GravityCompat.START);
                         return true;

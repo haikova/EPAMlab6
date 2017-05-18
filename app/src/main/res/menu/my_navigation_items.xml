@@ -3,9 +3,9 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/frag1"
-            android:title="Custom View" />
+            android:title="@string/menu_one" />
         <item
             android:id="@+id/frag2"
-            android:title="Fragment2" />
+            android:title="@string/menu_two" />
     </group>
 </menu>

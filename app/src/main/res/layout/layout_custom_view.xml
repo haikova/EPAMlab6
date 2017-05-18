@@ -5,6 +5,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:customColor="#0066cc"
-        app:customRatio="15px"
         />
 </merge>

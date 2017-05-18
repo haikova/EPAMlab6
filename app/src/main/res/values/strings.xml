@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="menu">Menu</string>
+    <string name="menu_one">Custom View</string>
+    <string name="menu_two">Recycler View</string>
+
+
     <string-array name="fragment_array">
         <item>Fragmet 1</item>
         <item>Fragment 2</item>

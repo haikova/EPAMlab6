@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="CustomView">
         <attr name="customColor" format="color" />
-        <attr name="customRatio" format="dimension"/>
+        <attr name="customColorEyes" format="color" />
+        <attr name="customColorMouth" format="color" />
     </declare-styleable>
 </resources>
