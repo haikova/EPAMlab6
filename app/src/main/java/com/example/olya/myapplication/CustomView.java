@@ -35,7 +35,6 @@ public class CustomView extends View {
         painter = new Paint();
         matrix = new Matrix();
         path = new Path();
-
         matrix.reset();
         matrix.setRotate(180, 100, 200);
 
